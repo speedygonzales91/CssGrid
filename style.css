@@ -1,0 +1,20 @@
+.wrapper div {
+  background-color: #eee;
+  padding: 10px;
+}
+
+.wrapper div:nth-child(odd) {
+  background-color: #ddd;
+}
+
+/*Work with columns*/
+.wrapper {
+  display: grid;
+  grid-template-columns: 70% 30%; /*Gives 2 columns in a row*/
+
+  grid-column-gap: 1em; /*This one separates the columns*/
+  grid-row-gap: 1em; /*This one separates the rows*/
+
+  /*This one does the same as above*/
+  grid-gap: 1em;
+}

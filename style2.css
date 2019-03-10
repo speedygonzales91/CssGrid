@@ -1,0 +1,33 @@
+.wrapper div {
+  background-color: #eee;
+  padding: 10px;
+}
+
+.wrapper div:nth-child(odd) {
+  background-color: #ddd;
+}
+
+/*Edit Grids*/
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; /*fr is better than percentage because margins are handled*/
+
+  /*This one is shorter than above*/
+  grid-template-columns: repeat(3, 1fr); /* repeat(3, 1fr 2fr); for different ratios*/
+  grid-gap: 1em;
+
+  /*grid-auto-rows: 100px; This makes the rows 100px height. The longer text goes out...*/
+
+  grid-auto-rows: minmax(100px, auto); /*If the row is greater than 100px makes it auto*/
+}
+
+
+.nested {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* repeat(3, 1fr 2fr); for different ratios*/
+}
+
+.nested div {
+  background-color: #ddd;
+  border: 1px solid #333;
+}
