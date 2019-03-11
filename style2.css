@@ -25,7 +25,9 @@
 .nested {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* repeat(3, 1fr 2fr); for different ratios*/
-}
+    grid-auto-rows: 70px;
+    grid-gap: 1em;
+  }
 
 .nested div {
   background-color: #ddd;

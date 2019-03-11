@@ -1,0 +1,41 @@
+.wrapper div {
+    background-color: #eee;
+    padding: 10px;
+  }
+  
+  .wrapper div:nth-child(odd) {
+    background-color: #ddd;
+  }
+  
+  /*Edit Grids*/
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 1em;
+    justify-items: stretch; /*horizontally align*/
+    align-items: stretch; /*vertically align*/
+
+}
+  
+.box1 {
+    /*align-self: start;*/
+    grid-column: 1/3;
+    grid-row: 1/3; /*last from 1 to 3*/
+}
+
+.box2 {
+    /*align-self: end;*/
+    grid-column: 3;
+    grid-row: 1/3;
+}
+
+.box3 {
+    /*justify-self: end;*/
+}
+
+/*Example for overlapping boxes*/
+.box4 {
+    grid-column: 1;
+    grid-row: 2/4;
+}
